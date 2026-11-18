@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* GENERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +28,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Main Section */
+/* MAIN SECTION */
 
 .hero {
     min-height: 100vh;
@@ -46,7 +50,7 @@ body {
     animation: appear 1.2s ease;
 }
 
-/* Sunflower */
+/* SUNFLOWER */
 
 .sunflower {
     font-size: 60px;
@@ -65,7 +69,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* Birthday Photo */
+/* SAM'S PHOTO */
 
 .photo-frame {
     width: 155px;
@@ -74,13 +78,16 @@ body {
     position: relative;
     border-radius: 50%;
     padding: 7px;
+
     background: linear-gradient(
         135deg,
         #ffd76a,
         #f49bb0,
         #fff0b9
     );
+
     box-shadow: 0 8px 25px rgba(220,150,100,0.25);
+
     animation: appear 1.5s ease;
 }
 
@@ -109,7 +116,7 @@ body {
     left: -12px;
 }
 
-/* Headings */
+/* HEADINGS */
 
 h1 {
     font-family: 'Dancing Script', cursive;
@@ -138,7 +145,7 @@ h1 {
     margin: 20px;
 }
 
-/* Cake */
+/* CAKE */
 
 .cake {
     font-size: 75px;
@@ -146,19 +153,27 @@ h1 {
     animation: bounce 2s infinite;
 }
 
-/* Buttons */
+/* BUTTONS */
 
 button {
     border: none;
     border-radius: 30px;
     padding: 14px 25px;
-    background: linear-gradient(45deg, #ef91a5, #e9ad54);
+
+    background: linear-gradient(
+        45deg,
+        #ef91a5,
+        #e9ad54
+    );
+
     color: white;
     font-family: inherit;
     font-size: 13px;
     font-weight: 600;
+
     cursor: pointer;
     margin: 10px 5px;
+
     box-shadow: 0 6px 15px rgba(220,140,140,0.25);
     transition: 0.3s;
 }
@@ -167,7 +182,11 @@ button:hover {
     transform: translateY(-4px) scale(1.03);
 }
 
-/* Birthday Letter */
+button:active {
+    transform: scale(0.96);
+}
+
+/* BIRTHDAY LETTER */
 
 .letter {
     display: none;
@@ -187,9 +206,11 @@ button:hover {
     border: 1px dashed #e9b76c;
     border-radius: 20px;
     padding: 25px 20px;
+
     text-align: left;
     line-height: 1.9;
     font-size: 14px;
+
     animation: appear 0.8s ease;
 }
 
@@ -204,33 +225,68 @@ button:hover {
 .signature {
     text-align: right;
     margin-top: 20px;
+
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
     color: #d98b35;
 }
 
-/* Footer */
+/* CELEBRATION MESSAGE */
 
-.footer {
-    font-size: 12px;
-    color: #aa8c7c;
+.celebration-message {
+    display: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(25px, 6vw, 35px);
+    color: #e68b9d;
     margin-top: 25px;
+    line-height: 1.5;
 }
 
-/* Floating Hearts */
+.celebration-message.show {
+    display: block;
+    animation: appear 0.8s ease;
+}
+
+/* FLOATING EMOJIS */
 
 .floating {
     position: fixed;
-    bottom: -30px;
+    bottom: -40px;
     font-size: 22px;
     pointer-events: none;
     animation: floatUp 7s linear forwards;
     z-index: 10;
 }
 
-/* Animations */
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    top: -40px;
+    pointer-events: none;
+    z-index: 9999;
+
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+
+}
+
+/* ANIMATIONS */
 
 @keyframes floatUp {
+
     0% {
         transform: translateY(0) rotate(0);
         opacity: 0;
@@ -244,19 +300,35 @@ button:hover {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
     }
+
 }
 
 @keyframes rotate {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(360deg); }
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
 }
 
 @keyframes appear {
+
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -266,9 +338,18 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
-/* Mobile Responsive */
+/* FOOTER */
+
+.footer {
+    font-size: 12px;
+    color: #aa8c7c;
+    margin-top: 25px;
+}
+
+/* MOBILE RESPONSIVE */
 
 @media(max-width: 480px) {
 
@@ -295,8 +376,19 @@ button:hover {
         font-size: 12px;
         padding: 13px 19px;
     }
+
 }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 </style>
+
 </head>
 
 <body>
@@ -305,48 +397,65 @@ button:hover {
 
 <div class="container">
 
-    <!-- Sunflower -->
+    <!-- SUNFLOWER -->
+
     <div class="sunflower">🌻</div>
 
     <div class="tag">
         A SPECIAL DAY FOR SOMEONE SPECIAL ✨
     </div>
 
-    <!-- Sam's Picture -->
+
+    <!-- SAM'S PICTURE -->
+
     <div class="photo-frame">
 
-        <img src="sam.jpeg" alt="SAM">
+        <img src="sam.jpeg" alt="🌻SAM🌻">
 
         <span class="flower flower-one">🌻</span>
+
         <span class="flower flower-two">🌼</span>
 
     </div>
 
-    <!-- Birthday Heading -->
+
+    <!-- BIRTHDAY HEADING -->
+
     <h1>Happy Birthday!</h1>
 
     <h2 class="name">Sam 🌻</h2>
 
+
     <p class="subtitle">
+
         To the cutest little doctor with the sweetest smile,
         may your special day be filled with endless happiness,
         warm hugs, beautiful memories and lots of love. 💗
+
     </p>
+
 
     <div class="divider">
         ♡ ───── ✿ ───── ♡
     </div>
 
-    <!-- Birthday Cake -->
+
+    <!-- BIRTHDAY CAKE -->
+
     <div class="cake">🎂</div>
 
+
     <p class="subtitle">
+
         Today, the world celebrates you.
         Keep smiling, keep shining and keep being
         the beautiful soul that you are!
+
     </p>
 
-    <!-- Buttons -->
+
+    <!-- BUTTONS -->
+
     <button onclick="openLetter()">
         💌 Open Your Special Letter
     </button>
@@ -355,7 +464,26 @@ button:hover {
         🎉 A Little Surprise!
     </button>
 
-    <!-- Special Letter -->
+
+    <!-- CELEBRATION MESSAGE -->
+
+    <div class="celebration-message" id="celebrationMessage">
+
+        Yayyy! Happy Birthday, Sam! 🌻💗
+
+        <br>
+
+        You are someone's sunshine! ☀️
+
+        <br>
+
+        Keep shining, little doctor! 🩺
+
+    </div>
+
+
+    <!-- SPECIAL BIRTHDAY LETTER -->
+
     <div class="letter" id="letter">
 
         <h2>Dear Sam 🌻</h2>
@@ -366,6 +494,7 @@ button:hover {
 
         I hope this new chapter of your life brings you
         everything your heart has ever wished for.
+
         May your days be as bright as a sunflower,
         your smile never fade, and your dreams slowly
         turn into beautiful realities.
@@ -379,6 +508,7 @@ button:hover {
         <br><br>
 
         Never forget how special you are.
+
         Stay the same adorable, kind and wonderful Sam.
 
         <br><br>
@@ -387,22 +517,30 @@ button:hover {
         and beautiful little moments.
 
         <div class="signature">
+
             With lots of love ♡
+
         </div>
 
     </div>
 
+
+    <!-- FOOTER -->
+
     <div class="footer">
+
         Made with ♡, just for Sam 🌻
+
     </div>
 
 </div>
 
 </section>
 
+
 <script>
 
-// Open and close birthday letter
+/* OPEN AND CLOSE LETTER */
 
 function openLetter() {
 
@@ -422,22 +560,29 @@ function openLetter() {
         });
 
     }
+
 }
 
 
-// Floating emoji animation
+/* FLOATING EMOJIS */
 
 function createFloating() {
 
-    const emojis = ["💗", "🌻", "✨", "💕", "🌸"];
+    const emojis = [
+        "💗",
+        "💕",
+        "🌻",
+        "🌸",
+        "✨",
+        "🌼"
+    ];
 
     const item = document.createElement("div");
 
     item.className = "floating";
 
-    item.innerHTML = emojis[
-        Math.floor(Math.random() * emojis.length)
-    ];
+    item.innerHTML =
+        emojis[Math.floor(Math.random() * emojis.length)];
 
     item.style.left = Math.random() * 100 + "vw";
 
@@ -452,22 +597,89 @@ function createFloating() {
 
 }
 
+
+/* CONTINUOUS FLOATING ANIMATION */
+
 setInterval(createFloating, 650);
 
 
-// Birthday Surprise
+/* BIRTHDAY CELEBRATION */
 
 function celebrate() {
 
-    for (let i = 0; i < 35; i++) {
+    // Show birthday message
 
-        setTimeout(createFloating, i * 100);
+    const message = document.getElementById(
+        "celebrationMessage"
+    );
+
+    message.classList.add("show");
+
+
+    // Celebration emoji collection
+
+    const emojis = [
+        "💗",
+        "💕",
+        "🌻",
+        "🌸",
+        "✨",
+        "🎉",
+        "💖",
+        "🌼",
+        "🎂",
+        "🎊"
+    ];
+
+
+    // Create 120 falling emojis
+
+    for (let i = 0; i < 120; i++) {
+
+        setTimeout(() => {
+
+            const item = document.createElement("div");
+
+            item.className = "confetti";
+
+            item.innerHTML =
+                emojis[Math.floor(Math.random() * emojis.length)];
+
+            item.style.left = Math.random() * 100 + "vw";
+
+            item.style.fontSize =
+                (18 + Math.random() * 22) + "px";
+
+            item.style.animationDuration =
+                (3 + Math.random() * 3) + "s";
+
+            document.body.appendChild(item);
+
+            setTimeout(() => {
+                item.remove();
+            }, 6500);
+
+        }, i * 30);
 
     }
 
-    alert(
-        "Happy Birthday, Sam! 🌻💗 You deserve all the happiness in the world! 🎂"
-    );
+
+    // Extra floating hearts and sunflowers
+
+    for (let i = 0; i < 35; i++) {
+
+        setTimeout(() => {
+            createFloating();
+        }, i * 100);
+
+    }
+
+    // Scroll to celebration message
+
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
 
 }
 
