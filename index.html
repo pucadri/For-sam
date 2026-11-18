@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sam 🌻</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff8e7, #ffe9ef, #fff4d6);
+    color: #684b42;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 18px;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255,255,255,0.75);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 45px 25px;
+    box-shadow: 0 15px 45px rgba(190,130,110,0.15);
+    animation: appear 1.2s ease;
+}
+
+.sunflower {
+    font-size: 65px;
+    animation: rotate 5s linear infinite;
+    display: inline-block;
+}
+
+.tag {
+    display: inline-block;
+    background: #fff0b9;
+    color: #a27625;
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 12px;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(48px, 11vw, 75px);
+    color: #e68b9d;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 15px auto;
+    max-width: 450px;
+    color: #80645c;
+}
+
+.name {
+    color: #d98b35;
+}
+
+.divider {
+    color: #e9ae4c;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.cake {
+    font-size: 75px;
+    margin: 15px;
+    animation: bounce 2s infinite;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 27px;
+    background: linear-gradient(45deg, #ef91a5, #e9ad54);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 5px;
+    box-shadow: 0 6px 15px rgba(220,140,140,0.25);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.letter {
+    display: none;
+    margin-top: 25px;
+    background: #fff8ec;
+    border: 1px dashed #e9b76c;
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: left;
+    line-height: 1.9;
+    font-size: 14px;
+    animation: appear 0.8s ease;
+}
+
+.letter h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #e68b9d;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: #d98b35;
+}
+
+.footer {
+    font-size: 12px;
+    color: #aa8c7c;
+    margin-top: 25px;
+}
+
+.floating {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    pointer-events: none;
+    animation: floatUp 7s linear infinite;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    20% { opacity: 0.8; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 480px) {
+    .container {
+        padding: 35px 18px;
+        border-radius: 23px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .letter {
+        font-size: 13px;
+        padding: 20px 15px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 13px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="container">
+
+        <div class="sunflower">🌻</div>
+
+        <div class="tag">A SPECIAL DAY FOR SOMEONE SPECIAL ✨</div>
+
+        <h1>Happy Birthday!</h1>
+
+        <h2 class="name">Sam 🌻</h2>
+
+        <p class="subtitle">
+            To the cutest little doctor with the sweetest smile,
+            may your special day be filled with endless happiness,
+            warm hugs, beautiful memories and lots of love. 💗
+        </p>
+
+        <div class="divider">♡ ───── ✿ ───── ♡</div>
+
+        <div class="cake">🎂</div>
+
+        <p class="subtitle">
+            Today, the world celebrates you.
+            Keep smiling, keep shining and keep being
+            the beautiful soul that you are!
+        </p>
+
+        <button onclick="openLetter()">
+            💌 Open Your Special Letter
+        </button>
+
+        <button onclick="celebrate()">
+            🎉 A Little Surprise!
+        </button>
+
+        <div class="letter" id="letter">
+
+            <h2>Dear Sam 🌻</h2>
+
+            Happy Birthday to my favourite little doctor! 💗
+
+            <br><br>
+
+            I hope this new chapter of your life brings you
+            everything your heart has ever wished for.
+            May your days be as bright as a sunflower,
+            your smile never fade, and your dreams slowly
+            turn into beautiful realities.
+
+            <br><br>
+
+            You spend so much time caring for others.
+            Today, I hope the whole world gives a little
+            extra care and happiness back to you.
+
+            <br><br>
+
+            Never forget how special you are.
+            Stay the same adorable, kind and wonderful Sam.
+
+            <br><br>
+
+            Wishing you a lifetime of sunshine, happiness
+            and beautiful little moments.
+
+            <div class="signature">
+                With lots of love ♡
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Made with ♡, just for Sam 🌻
+        </div>
+
+    </div>
+</section>
+
+<script>
+function openLetter() {
+    const letter = document.getElementById("letter");
+
+    if (letter.style.display === "block") {
+        letter.style.display = "none";
+    } else {
+        letter.style.display = "block";
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    }
+}
+
+function createFloating() {
+    const emojis = ["💗", "🌻", "✨", "💕", "🌸"];
+    const item = document.createElement("div");
+
+    item.className = "floating";
+    item.innerHTML = emojis[
+        Math.floor(Math.random() * emojis.length)
+    ];
+
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 9000);
+}
+
+setInterval(createFloating, 650);
+
+function celebrate() {
+    for (let i = 0; i < 35; i++) {
+        setTimeout(createFloating, i * 100);
+    }
+
+    alert("Happy Birthday, Sam! 🌻💗 You deserve all the happiness in the world! 🎂");
+}
+</script>
+
+</body>
+</html>
