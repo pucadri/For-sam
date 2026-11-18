@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Sam 🌻</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,6 +24,8 @@ body {
     overflow-x: hidden;
 }
 
+/* Main Section */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -35,18 +38,20 @@ body {
 .container {
     width: 100%;
     max-width: 650px;
-    background: rgba(255,255,255,0.75);
-    border: 2px solid #fff;
+    background: rgba(255,255,255,0.78);
+    border: 2px solid white;
     border-radius: 30px;
-    padding: 45px 25px;
+    padding: 40px 25px;
     box-shadow: 0 15px 45px rgba(190,130,110,0.15);
     animation: appear 1.2s ease;
 }
 
+/* Sunflower */
+
 .sunflower {
-    font-size: 65px;
-    animation: rotate 5s linear infinite;
+    font-size: 60px;
     display: inline-block;
+    animation: rotate 5s linear infinite;
 }
 
 .tag {
@@ -55,10 +60,56 @@ body {
     color: #a27625;
     border-radius: 30px;
     padding: 8px 18px;
-    font-size: 12px;
+    font-size: 11px;
     margin: 15px 0;
     letter-spacing: 1px;
 }
+
+/* Birthday Photo */
+
+.photo-frame {
+    width: 155px;
+    height: 155px;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 50%;
+    padding: 7px;
+    background: linear-gradient(
+        135deg,
+        #ffd76a,
+        #f49bb0,
+        #fff0b9
+    );
+    box-shadow: 0 8px 25px rgba(220,150,100,0.25);
+    animation: appear 1.5s ease;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.flower {
+    position: absolute;
+    font-size: 32px;
+    filter: drop-shadow(0 3px 3px rgba(0,0,0,0.1));
+}
+
+.flower-one {
+    top: -12px;
+    right: -12px;
+}
+
+.flower-two {
+    bottom: -8px;
+    left: -12px;
+}
+
+/* Headings */
 
 h1 {
     font-family: 'Dancing Script', cursive;
@@ -68,16 +119,17 @@ h1 {
     margin: 10px 0;
 }
 
+.name {
+    color: #d98b35;
+    font-size: 25px;
+}
+
 .subtitle {
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.9;
     margin: 15px auto;
     max-width: 450px;
     color: #80645c;
-}
-
-.name {
-    color: #d98b35;
 }
 
 .divider {
@@ -86,20 +138,24 @@ h1 {
     margin: 20px;
 }
 
+/* Cake */
+
 .cake {
     font-size: 75px;
     margin: 15px;
     animation: bounce 2s infinite;
 }
 
+/* Buttons */
+
 button {
     border: none;
     border-radius: 30px;
-    padding: 14px 27px;
+    padding: 14px 25px;
     background: linear-gradient(45deg, #ef91a5, #e9ad54);
     color: white;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     margin: 10px 5px;
@@ -111,10 +167,23 @@ button:hover {
     transform: translateY(-4px) scale(1.03);
 }
 
+/* Birthday Letter */
+
 .letter {
     display: none;
     margin-top: 25px;
-    background: #fff8ec;
+
+    background:
+        linear-gradient(
+            rgba(255,248,236,0.88),
+            rgba(255,248,236,0.88)
+        ),
+        url("sam.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     border: 1px dashed #e9b76c;
     border-radius: 20px;
     padding: 25px 20px;
@@ -140,27 +209,37 @@ button:hover {
     color: #d98b35;
 }
 
+/* Footer */
+
 .footer {
     font-size: 12px;
     color: #aa8c7c;
     margin-top: 25px;
 }
 
+/* Floating Hearts */
+
 .floating {
     position: fixed;
     bottom: -30px;
     font-size: 22px;
     pointer-events: none;
-    animation: floatUp 7s linear infinite;
+    animation: floatUp 7s linear forwards;
     z-index: 10;
 }
+
+/* Animations */
 
 @keyframes floatUp {
     0% {
         transform: translateY(0) rotate(0);
         opacity: 0;
     }
-    20% { opacity: 0.8; }
+
+    20% {
+        opacity: 0.8;
+    }
+
     100% {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
@@ -178,14 +257,29 @@ button:hover {
 }
 
 @keyframes appear {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Mobile Responsive */
+
 @media(max-width: 480px) {
+
     .container {
-        padding: 35px 18px;
+        padding: 32px 17px;
         border-radius: 23px;
+    }
+
+    .photo-frame {
+        width: 135px;
+        height: 135px;
     }
 
     .subtitle {
@@ -198,8 +292,8 @@ button:hover {
     }
 
     button {
-        font-size: 13px;
-        padding: 13px 20px;
+        font-size: 12px;
+        padding: 13px 19px;
     }
 }
 </style>
@@ -208,124 +302,175 @@ button:hover {
 <body>
 
 <section class="hero">
-    <div class="container">
 
-        <div class="sunflower">🌻</div>
+<div class="container">
 
-        <div class="tag">A SPECIAL DAY FOR SOMEONE SPECIAL ✨</div>
+    <!-- Sunflower -->
+    <div class="sunflower">🌻</div>
 
-        <h1>Happy Birthday!</h1>
+    <div class="tag">
+        A SPECIAL DAY FOR SOMEONE SPECIAL ✨
+    </div>
 
-        <h2 class="name">Sam 🌻</h2>
+    <!-- Sam's Picture -->
+    <div class="photo-frame">
 
-        <p class="subtitle">
-            To the cutest little doctor with the sweetest smile,
-            may your special day be filled with endless happiness,
-            warm hugs, beautiful memories and lots of love. 💗
-        </p>
+        <img src="sam.jpg" alt="Sam's beautiful picture">
 
-        <div class="divider">♡ ───── ✿ ───── ♡</div>
+        <span class="flower flower-one">🌻</span>
+        <span class="flower flower-two">🌼</span>
 
-        <div class="cake">🎂</div>
+    </div>
 
-        <p class="subtitle">
-            Today, the world celebrates you.
-            Keep smiling, keep shining and keep being
-            the beautiful soul that you are!
-        </p>
+    <!-- Birthday Heading -->
+    <h1>Happy Birthday!</h1>
 
-        <button onclick="openLetter()">
-            💌 Open Your Special Letter
-        </button>
+    <h2 class="name">Sam 🌻</h2>
 
-        <button onclick="celebrate()">
-            🎉 A Little Surprise!
-        </button>
+    <p class="subtitle">
+        To the cutest little doctor with the sweetest smile,
+        may your special day be filled with endless happiness,
+        warm hugs, beautiful memories and lots of love. 💗
+    </p>
 
-        <div class="letter" id="letter">
+    <div class="divider">
+        ♡ ───── ✿ ───── ♡
+    </div>
 
-            <h2>Dear Sam 🌻</h2>
+    <!-- Birthday Cake -->
+    <div class="cake">🎂</div>
 
-            Happy Birthday to my favourite little doctor! 💗
+    <p class="subtitle">
+        Today, the world celebrates you.
+        Keep smiling, keep shining and keep being
+        the beautiful soul that you are!
+    </p>
 
-            <br><br>
+    <!-- Buttons -->
+    <button onclick="openLetter()">
+        💌 Open Your Special Letter
+    </button>
 
-            I hope this new chapter of your life brings you
-            everything your heart has ever wished for.
-            May your days be as bright as a sunflower,
-            your smile never fade, and your dreams slowly
-            turn into beautiful realities.
+    <button onclick="celebrate()">
+        🎉 A Little Surprise!
+    </button>
 
-            <br><br>
+    <!-- Special Letter -->
+    <div class="letter" id="letter">
 
-            You spend so much time caring for others.
-            Today, I hope the whole world gives a little
-            extra care and happiness back to you.
+        <h2>Dear Sam 🌻</h2>
 
-            <br><br>
+        Happy Birthday to my favourite little doctor! 💗
 
-            Never forget how special you are.
-            Stay the same adorable, kind and wonderful Sam.
+        <br><br>
 
-            <br><br>
+        I hope this new chapter of your life brings you
+        everything your heart has ever wished for.
+        May your days be as bright as a sunflower,
+        your smile never fade, and your dreams slowly
+        turn into beautiful realities.
 
-            Wishing you a lifetime of sunshine, happiness
-            and beautiful little moments.
+        <br><br>
 
-            <div class="signature">
-                With lots of love ♡
-            </div>
+        You spend so much time caring for others.
+        Today, I hope the whole world gives a little
+        extra care and happiness back to you.
 
-        </div>
+        <br><br>
 
-        <div class="footer">
-            Made with ♡, just for Sam 🌻
+        Never forget how special you are.
+        Stay the same adorable, kind and wonderful Sam.
+
+        <br><br>
+
+        Wishing you a lifetime of sunshine, happiness
+        and beautiful little moments.
+
+        <div class="signature">
+            With lots of love ♡
         </div>
 
     </div>
+
+    <div class="footer">
+        Made with ♡, just for Sam 🌻
+    </div>
+
+</div>
+
 </section>
 
 <script>
+
+// Open and close birthday letter
+
 function openLetter() {
+
     const letter = document.getElementById("letter");
 
     if (letter.style.display === "block") {
+
         letter.style.display = "none";
+
     } else {
+
         letter.style.display = "block";
+
         letter.scrollIntoView({
             behavior: "smooth",
             block: "nearest"
         });
+
     }
 }
 
+
+// Floating emoji animation
+
 function createFloating() {
+
     const emojis = ["💗", "🌻", "✨", "💕", "🌸"];
+
     const item = document.createElement("div");
 
     item.className = "floating";
+
     item.innerHTML = emojis[
         Math.floor(Math.random() * emojis.length)
     ];
 
     item.style.left = Math.random() * 100 + "vw";
-    item.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+    item.style.animationDuration =
+        (5 + Math.random() * 4) + "s";
 
     document.body.appendChild(item);
 
-    setTimeout(() => item.remove(), 9000);
+    setTimeout(() => {
+        item.remove();
+    }, 9000);
+
 }
 
 setInterval(createFloating, 650);
 
+
+// Birthday Surprise
+
 function celebrate() {
+
     for (let i = 0; i < 35; i++) {
+
         setTimeout(createFloating, i * 100);
+
     }
 
-    alert("Happy Birthday, Sam! 🌻💗 You deserve all the happiness in the world! 🎂");
+    alert(
+        "Happy Birthday, Sam! 🌻💗 You deserve all the happiness in the world! 🎂"
+    );
+
 }
+
 </script>
 
 </body>
